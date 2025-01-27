@@ -1,0 +1,70 @@
+{
+
+  "position": "top",
+  "layer": "top",
+  "height": 30,
+  "spacing": 0,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "tray"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "temperature",
+    "memory",
+    "hyprland/language",
+    "battery"
+  ],
+
+
+  "hyprland/workspaces": {
+    "active-only": true
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "{:%H:%M}"
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format":"{usage}% ",
+    "max-length": 25
+  },
+
+  "temperature": {
+    "interval": 2,
+    "format": "{temperatureC}°C "
+  },
+
+  "memory": {
+    "interval": 2,
+    "format": "{}% "
+  },
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "en",
+    "format-ru": "ru",
+    "format-sl": "sl"
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "interval": 2,
+    "format": "{icon} {capacity}%",
+    "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+    "format-charging": "󰂄 {capacity}%"
+  }
+
+}
