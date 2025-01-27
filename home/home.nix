@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ ./hypr ./kitty ./dunst ./waybar ./tofi ./firefox ./vscodium ./neovim ];  
+  imports = [ ./hypr ./kitty ./dunst ./tofi ./firefox ./vscodium ./neovim ];  
 
   home.username = "hryu";
   home.homeDirectory = "/home/hryu";
@@ -16,6 +16,10 @@
     userEmail = "wcaofow@tuta.io";
   };
 
+nixpkgs.config.permittedInsecurePackages = [
+"electron-27.3.11"
+];
+
   home.packages = with pkgs; [
     # Default packages.
     wget
@@ -24,7 +28,7 @@
     tor-browser
     steam
     libva 
-    transmission-gtk
+    transmission_4-gtk
     lutris
     wineWowPackages.waylandFull
     gamemode
@@ -67,7 +71,10 @@
     obs-studio
     obs-studio-plugins.obs-vaapi
 
+
+    nerd-fonts.jetbrains-mono
   ];
+
 
   home.file = {};
 
